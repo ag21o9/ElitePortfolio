@@ -1,0 +1,114 @@
+/* Home.css */
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shine {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(0, 204, 255, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(0, 204, 255, 0.5);
+    }
+}
+
+@keyframes contraction {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.animate-fall {
+    animation: fall 1s ease-in-out forwards;
+}
+
+.animate-shine {
+    animation: shine 1.5s infinite alternate;
+}
+
+.animate-contraction {
+    animation: contraction 1.5s ease-in-out infinite;
+}
+
+.logo {
+    border: 5px solid #00f; /* Adjust color to your liking */
+    border-radius: 50%; /* Make it circular or adjust as needed */
+    padding: 10px; /* Space between logo and border */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Shine effect for the border */
+.logo:hover {
+    border-color: #fff; /* Change border color on hover for shine effect */
+}
+
+/* Metallic look for sections */
+.bg-metallic {
+    background-size: 200% 200%;
+    animation: shine 5s linear infinite;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-metallic::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    opacity: 0.2;
+    filter: blur(50px);
+}
+
+/* 3D Effect */
+.section-3d {
+    perspective: 1000px; /* Perspective for 3D effect */
+}
+
+.section-3d-content {
+    transform-style: preserve-3d; /* Maintain 3D transformations */
+    transition: transform 0.5s; /* Smooth transition */
+}
+
+.section-3d:hover .section-3d-content {
+    transform: rotateY(10deg) rotateX(5deg); /* Rotate on hover for 3D effect */
+}
+
+/* Additional styles for beautifying sections */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+
+
+/* Add box shadow for depth */
+.rounded-lg {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Styles */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00f; /* Change color for metallic look */
+}
+

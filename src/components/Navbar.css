@@ -1,0 +1,59 @@
+/* Navbar.css */
+
+/* Metallic black background */
+.navbar-metallic {
+    background: linear-gradient(145deg, #1a1a1a, #000000); /* Metallic black gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for a 3D look */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light reflective border */
+  }
+  
+  /* Text styling */
+  .navbar-text {
+    color: #ffffff; /* White text */
+    font-size: 1.1rem;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Glossy effect on hover */
+  .navbar-text::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), transparent);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(1.2);
+  }
+  
+  /* Hover effect */
+  .navbar-text:hover {
+    color: #e5e5e5;
+  }
+  
+  .navbar-text:hover::before {
+    opacity: 1;
+    transform: scale(1);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1)); /* Glossy hover effect */
+    z-index: 0;
+  }
+  
+  /* Navbar container styling */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+  }
+  
+  /* Mobile menu background metallic */
+  .navbar-mobile-metallic {
+    background: linear-gradient(145deg, #1a1a1a, #000000);
+  }
+  
